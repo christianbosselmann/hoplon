@@ -31,7 +31,7 @@ devtools::install_github("christianbosselmann/hoplon")
 This basic examples takes a tibble with a column term of HPO IDs, propagates them to their ancestors and returns the term description for each ancestor. Note that functions return character vectors as column lists - unnest them if needed.
 
 ```{r example}
-library(tidyverse, quietly = TRUE, warn.conflicts = FALSE)
+suppressPackageStartupMessages(library(tidyverse))
 library(hoplon)
 data <- tibble(term = c("HP:0011146", "HP:0012736", "HP:0000717"))
 data %>%
