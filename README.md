@@ -26,7 +26,7 @@ each ancestor. Note that functions return character vectors as column
 lists - unnest them if needed.
 
 ``` r
-library(tidyverse, quietly = TRUE)
+library(tidyverse, quietly = TRUE, warn.conflicts = FALSE)
 #> ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 #> ✔ dplyr     1.1.2     ✔ readr     2.1.4
 #> ✔ forcats   1.0.0     ✔ stringr   1.5.0
