@@ -11,9 +11,12 @@
 #' data %>% mutate(ancestors = ancestors(term))
 #' }
 ancestors <- function(term) {
-  parent <- unlist(hpo[hpo$term == term, ]$parents)
-  ls_parents <- list()
   ancestors <- list()
+  parent <- unlist(hpo[hpo$term == term, ]$parents)
+
+  ls_parents <- list()
+  ls_parents <- c(ls_parents, parent)
+
   root_flag <- FALSE
   while(root_flag == FALSE){
     pp <- unlist(hpo[which(hpo$term %in% parent), ]$parents)
